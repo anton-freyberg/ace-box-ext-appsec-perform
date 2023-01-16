@@ -10,6 +10,9 @@ def tagMatchRules = [
     ]
 ]
 pipeline {
+    parameters {
+        choice(name: 'simulatePrivateRanges', choices: ['true', 'false'], description: 'Select if users should use public or private IPs')
+    }
     agent {
         label 'kubegit'
     }
@@ -35,7 +38,7 @@ pipeline {
             steps {
                 checkout scm
                 container('helm') {
-                    sh "helm upgrade -i unguard helm/unguard -f helm/unguard/values.yaml --namespace unguard --set ingress.domain=${env.INGRESS_DOMAIN} --wait"
+                    sh "helm upgrade -i unguard helm/unguard -f helm/unguard/values.yaml --namespace unguard --set ingress.domain=${env.INGRESS_DOMAIN} --set unguard.userSimulator.simulatePrivateRanges=${env.publicIPs} --wait"
                 }
             }
         }
