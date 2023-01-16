@@ -38,7 +38,7 @@ pipeline {
             steps {
                 checkout scm
                 container('helm') {
-                    sh "helm upgrade -i unguard helm/unguard -f helm/unguard/values.yaml --namespace unguard --set ingress.domain=${env.INGRESS_DOMAIN} --set unguard.userSimulator.simulatePrivateRanges=${env.publicIPs} --wait"
+                    sh "helm upgrade -i unguard helm/unguard -f helm/unguard/values.yaml --namespace unguard --set ingress.domain=${env.INGRESS_DOMAIN} --set unguard.userSimulator.simulatePrivateRanges=${params.simulatePrivateRanges} --wait"
                 }
             }
         }
@@ -63,3 +63,4 @@ pipeline {
         }     
     }
 }
+
