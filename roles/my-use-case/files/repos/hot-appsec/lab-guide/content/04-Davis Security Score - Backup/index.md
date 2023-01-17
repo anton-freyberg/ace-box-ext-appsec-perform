@@ -4,14 +4,13 @@ In this hands on exercise we want to see how internet exposure affects the Davis
 
 ### Run the Pipeline
 
-Turn on public IPs
+We now want our application unguard to be called by users using public IPs. To do so, go to Jenkins and redeploy the unguard application, this time with `simulatePrivateRanges` set to `false`.
 
-
-
+![simulatePrivateRanges_false](../../assets/images/simulatePrivateRanges_false.png)
 
 
 ### DSS Recap
-Why did we deploy a synthetic test? We did it to show how the Davis Security Score works. So let's quickly recap what the DSS is.
+Why did we enable public IPs? We did it to show how the Davis Security Score works. So let's quickly recap what the DSS is.
 
 Davis Security Score (DSS) is an enhanced risk-calculation score based on the industry-standard Common Vulnerability Scoring System (CVSS). Because Davis AI also considers parameters like public internet exposure and checks to see if and where sensitive data is affected, DSS is the most precise risk-assessment score available.
 The OneAgent knows and reflects that in the Davis Security Score.
@@ -37,13 +36,6 @@ Before we go on, search for the vulnerability with CVE ID: `CVE-2018-19827`, ope
 
 For a vulnerability to have internet exposure, the vulnerable entity has to be called by at least two different non private network. 
 
-We now want to simulate these two networks by adding endpoints to our synthetic test. In order to do so, navigate to `Synthetics > unguard.http > Edit > Frequency and Locations` and add two cities of your choice. 
-
-![Synthetic location](../../assets/images/4-7-synthetic-location-http.png)
-
-Then do the so same for the browser monitor `unguard.clickpath`.
-
-Both these synthetic tests will now start calling the unguard application and affect the public exposure of the vulnerabilities of the application. After we did so, lets take a look at the current state of our vulnerabilities.
 
 #### Analyze changes in Davis Security Score
 
