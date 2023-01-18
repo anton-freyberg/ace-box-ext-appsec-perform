@@ -4,14 +4,13 @@ To get started with AppSec, we now need an application we want to monitor. There
 
 ### Trigger Pipelines
 
-Before taking a look at what happens behind the scenes, let us deploy the `unguard` application straight away by going to your jenkins instance (link on your dashboard). On your Jenkins dashboard you will find the `Deploy Unguard` pipeline. Open it by clicking on it and then run it by clicking on `"build now"` (see section **Unguard Deploy** below for screenshots).
+Before taking a look at what happens behind the scenes, let us deploy the `unguard` application straight away by going to your jenkins instance (link on your dashboard). On your Jenkins dashboard you will find the `Deploy Unguard` pipeline. Open it by clicking on it and then run it by clicking on `"build with paramters"`  and `Build` (see section **Unguard Deploy** below for screenshots).
 
 #### Unguard deploy
 
 ![Deploy Unguard](../../assets/images/2-4-pipeline.png) 
 
 ![Build now](../../assets/images/2-5-buildnow.png)
-![Building](../../assets/images/2-5-buildnow2.png)
 
 
 
