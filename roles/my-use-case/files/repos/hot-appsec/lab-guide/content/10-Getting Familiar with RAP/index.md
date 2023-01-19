@@ -11,7 +11,7 @@ Runtime Application Protection (RAP) is different than the application security 
 
 ### Log into Unguard
 
-To get into unguard, open the following URL `unguard.<your_DTU_lab_ID>.dynatrace.training`, sign up with any credentials you like and then log in with the same credentials.
+To get into unguard, open the following URL `unguard.<your_DTU_lab_ID>.dynatrace.training/ui`, sign up with any credentials you like and then log in with the same credentials.
 
 ![signup](../../assets/images/unguard_sign_up.png)
 
