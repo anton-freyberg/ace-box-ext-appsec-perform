@@ -122,9 +122,9 @@ controller:
               description('Check out {{ ingress_protocol }}://{{ git_domain }}/{{ hot_appsec_org }}/{{ hot_appsec_repo_name }} for more information')
           - script: >
               pipelineJob('hot-appsec/1. Deploy Unguard') {
-                  parameters {
-        choice(name: 'simulatePrivateRanges', choices: ['true', 'false'], description: 'Select if users should use public or private IPs')
-    }
+                parameters {
+                  choice(name: 'simulatePrivateRanges', choices: ['true', 'false'], description: 'Select if users should use public or private IPs')
+                }
                 definition {
                   cpsScm {
                     scriptPath('jenkins/deploy.Jenkinsfile')
