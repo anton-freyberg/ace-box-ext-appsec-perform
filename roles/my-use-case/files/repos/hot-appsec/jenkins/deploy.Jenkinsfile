@@ -11,7 +11,7 @@ def tagMatchRules = [
 ]
 pipeline {
     parameters {
-        string(name: 'simulatePrivateRanges', defaultValue: 'true', description: 'Select if users should use public or private IPs', trim: true)
+        choice(name: 'simulatePrivateRanges', choices: ['true', 'false'], description: 'Select if users should use public or private IPs')
     }
     agent {
         label 'kubegit'
