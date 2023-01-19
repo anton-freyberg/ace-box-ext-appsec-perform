@@ -123,7 +123,7 @@ controller:
           - script: >
               pipelineJob('hot-appsec/1. Deploy Unguard') {
                 parameters {
-                  choice(name: 'simulatePrivateRanges', choices: ['true', 'false'], description: 'Select if users should use public or private IPs')
+                  choiceParam(name: 'simulatePrivateRanges', choices: ['true', 'false'], description: 'Select if users should use public or private IPs')
                 }
                 definition {
                   cpsScm {
