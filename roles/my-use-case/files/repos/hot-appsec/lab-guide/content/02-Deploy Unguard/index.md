@@ -210,11 +210,3 @@ Navigate to the `Kubernetes` menu. You will find the `ACE-BOX` cluster in which 
 
 ![unguard](../../assets/images/2-12-kubernetes.png)
 
-### Deploy a second app: the SimpleNodeService
-As part of a future lab, we also need to deploy another app. 
-To deploy this app, go back to the dashboard of Jenkins, and navigate to the `demo-appsec` folder.
-Click on the *play* button next to the pipeline called `1. Build`, and when asked for a build number leave the default `1`, and click on `Build`.
-
-![](../../assets/images/2-9-jenkins-demo-appsec.png)
-
-For now, we will not use this app. Please continue with the remainder of the lab.
